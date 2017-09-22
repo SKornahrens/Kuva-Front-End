@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000'
+const url = 'https://kuvafundb.herokuapp.com'
 
 $(() => {
   authorizeUser()
@@ -25,13 +25,14 @@ function logIn(event) {
         $.get(`${url}/api/patrons`)
         .then(response => {
           for(var i = 0; i < response.length; i++) {
+            console.log(response[i].username);
             if (response[i].username === username) {
                 localStorage.setItem('user_id', response[i].user_id)
+                localStorage.setItem('token', response.data)
+                location.href = './dashboard.html';
             }
           }
         })
-        localStorage.setItem('token', response.data)
-        location.href = './dashboard.html';
       }
     })
 }

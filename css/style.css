@@ -74,8 +74,8 @@ footer.page-footer {
 }
 
 #hikingparallex {
-  -webkit-filter: opacity(88%);
-  filter: opacity(88%);
+  -webkit-filter: opacity(70%);
+  filter: opacity(70%);
 }
 
 #concertparallex {
@@ -108,4 +108,100 @@ footer.page-footer {
 
 button:hover {
   background-color: black !important;
+}
+
+.dashevent:link {
+  color: red;
+}
+
+.dashevent:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+.viewalbum:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+#welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.purpGradient {
+  background-image: -webkit-radial-gradient(circle, white, silver);
+}
+
+.frontCollage {
+  -webkit-filter: opacity(80%);
+  filter: opacity(80%);
+}
+
+.frontText {
+  /*font-size: 36px;*/
+  line-height: 45.9px;
+  color: rgb(72, 100, 168)
+}
+
+.words {
+  font-size: 30px;
+}
+
+.footerPics {
+  max-width: 65px;
+  margin: 10px;
+}
+
+/*editable table CSS*/
+@import "compass/css3";
+
+.table-editable {
+  position: relative;
+
+  .glyphicon {
+    font-size: 20px;
+  }
+}
+
+.table-remove {
+  color: #700;
+  cursor: pointer;
+
+  &:hover {
+    color: #f00;
+  }
+}
+
+.table-up, .table-down {
+  color: #007;
+  cursor: pointer;
+
+  &:hover {
+    color: #00f;
+  }
+}
+
+.table-add {
+  color: #070;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 0;
+
+  &:hover {
+    color: #0b0;
+  }
+}
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+  color: #d1d1d1;
+}
+
+#ProPic {
+  max-width: 100px;
+  max-height: 100px;
 }

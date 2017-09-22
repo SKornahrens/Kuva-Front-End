@@ -14,13 +14,15 @@
 </head>
 
 <body>
+
+  <!-- Top Nav Bar  -->
   <header>
     <div class="navbar-fixed">
       <nav class="grey darken-4" role="navigation">
         <div class="nav-wrapper container">
           <a id="logo-container" href="#" class="brand-logo grey-text text-darken-1"><img src = "photos/logo.png"></a>
           <ul class="right hide-on-med-and-down">
-            <li><a class="grey-text text-darken-1 waves-purple" href="#">Sign Out</a></li>
+            <li><a class="grey-text text-darken-1 waves-purple" id="SignOut">Sign Out</a></li>
           </ul>
 
           <ul id="nav-mobile" class="side-nav">
@@ -50,57 +52,57 @@
         <div class="background">
           <img src="photos/hiking.png">
         </div>
-        <a href="#!user"><img class="circle" src="photos/hiking.png"></a>
-        <a href="#!name"><span class="white-text name">John Doe</span></a>
-        <a href="#!email"><span class="white-text email">user@email.com</span></a>
+        <img class="ProfilePic circle" src="">
+        <h3 class="UserName white-text name"></h3>
       </div>
 
 
-      <a href="#!"><i class="material-icons">add</i>Create New Event</a>
+      <a href="createevent.html"><i class="material-icons">add</i>Create New Album</a>
 
       <div class="divider"></div>
       <div>
-      <a class="subheader">Albums</a>
-      <ul id="albumnames">
-        <li class="viewalbum" id="
-        3"> Test</li>
-      </ul>
-      <a href="#" data-activates="slide-out" class="button-collapse "></a>
+        <a class="subheader">Albums</a>
+        <ul id="albumnames">
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse "></a>
+      </div>
     </div>
-  </div>
 
     <!-- Album -->
 
-    <h3 class="center" id="eventname"></h3>
-    <h5 class="center" id="daterange"></h5>
 
-    <div class="row" id="picDiv">
-    </div>
     <div class="container">
-      <br><br><br>
-      <h5>dev mode navigation</h5>
-      <a class="waves-effect waves-light btn" href='index.html'>index</a>
-      <a class="waves-effect waves-light btn" href='login.html'>login</a>
-      <a class="waves-effect waves-light btn" href='album.html'>album</a>
-      <a class="waves-effect waves-light btn" href='createevent.html'>create event</a>
-      <a class="waves-effect waves-light btn" href='dashboard.html'>dashboard</a>
+
+      <h3 class="center" id="eventname"></h3>
+      <h5 class="center" id="daterange"></h5>
+      <div class="row s12 center" id="profilepictures">
+
+      </div>
+
+      <div class="row" id="picDiv">
+      </div>
     </div>
   </main>
 
   <footer class="page-footer grey darken-4">
-
     <div class="footer-copyright center">
       <div class="container">
-        Made by Global Turtle Hackers
+        <a target="_blank" href="https://www.linkedin.com/in/skornahrens/"> <img class="circle footerPics" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAodAAAAJDgwYWFiZTkzLTJkNjItNGZkZS1hOWM4LTVhMGJkZTg4Y2E3Zg.jpg"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/jpmendenhall/"> <img class="circle footerPics" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAArTAAAAJDk4ODQ5NzVlLTQwMzgtNDQzNC04NTQ1LTdjN2I2YzIzNWJlMQ.jpg"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/chelciebritt/"> <img class="circle footerPics" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAANiAAAAJGZkOTExMDFmLWNmYzUtNDNhZS04NmU0LTc4M2IzMWVkOGI4MQ.jpg"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/quintanamiriam/"> <img class="circle footerPics" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAA19AAAAJDMxYTI2Mjg3LTkyMjQtNDFmZC05YzM2LTU2NDgwMWE0OTMyNQ.jpg"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/cole-stasney/"> <img class="circle footerPics" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAA10AAAAJDY0ZTEyYmVjLWE3MWEtNGY4Ny05Y2EzLTAxMmQwNWRlM2JhZQ.jpg"></a>
       </div>
     </div>
   </footer>
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.18.1/moment.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/logout.js"></script>
 
 </body>
 

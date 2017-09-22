@@ -21,7 +21,7 @@
         <div class="nav-wrapper container">
           <a id="logo-container" href="#" class="brand-logo grey-text text-darken-1 "><img src = "photos/logo.png"></a>
           <ul class="right hide-on-med-and-down">
-            <li><a class="grey-text text-darken-1 waves-purple" href="#">Sign Out</a></li>
+            <li><a class="grey-text text-darken-1 waves-purple" id="SignOut">Sign Out</a></li>
           </ul>
           <ul id="nav-mobile" class="side-nav">
             <li><a href="index.html">Sign Out</a></li>
@@ -34,80 +34,92 @@
 
 
   <main>
-    <ul id="slide-out " class="side-nav fixed gradientSideNav ">
-      <li>
-        <div class="user-view ">
-          <div class="background ">
-            <img src="images/office.jpg ">
-          </div>
-          <a href="#!user "><img class="circle " src="images/yuna.jpg "></a>
-          <a href="#!name "><span class="white-text name ">John Doe</span></a>
-          <a href="#!email "><span class="white-text email ">user@email.com</span></a>
+    <!-- Side Nav -->
+
+    <div id="slide-out" class="side-nav fixed gradientSideNav">
+
+      <div class="user-view">
+        <div class="background">
+          <img src="photos/hiking.png">
         </div>
-      </li>
-      <li><a href="#! "><i class="material-icons ">add</i>Create New Event</a></li>
-      <li>
-        <div class="divider "></div>
-      </li>
-      <li><a class="subheader ">Albums</a></li>
-      <li><a class="waves-effect " href="#! ">Third Link With Waves</a></li>
-      <li><a class="waves-effect " href="#! ">Third Link With Waves</a></li>
-      <li><a class="waves-effect " href="#! ">Third Link With Waves</a></li>
-      <li><a class="waves-effect " href="#! ">Third Link With Waves</a></li>
-      <li><a class="waves-effect " href="#! ">Third Link With Waves</a></li>
-      <li><a class="waves-effect " href="#! ">Third Link With Waves</a></li>
-      <li><a class="waves-effect " href="#! ">Third Link With Waves</a></li>
-    </ul>
-    <a href="# " data-activates="slide-out " class="button-collapse show-on-large "></a>
+        <img class="ProfilePic circle" src="">
+        <h3 class="UserName white-text name"></h3>
+      </div>
+
+
+      <a href="createevent.html"><i class="material-icons">add</i>Create New Album</a>
+
+      <div class="divider"></div>
+      <div>
+        <a href="album.html">Your Albums</a>
+        <a href="#" data-activates="slide-out" class="button-collapse "></a>
+      </div>
     </div>
 
-    <form class="container" method="POST">
+      <!--  Create Event Form -->
+
+    <form class="container formPost" method="POST">
       <h5 class="center topBottomPad">Create New Event</h5>
       <div class="row">
         <div class="input-field col s12 center">
-          <input id="icon_prefix" type="text" class="validate">
-          <label for="icon_prefix">Event Name</label>
+          <input id="newEventName" type="text" class="validate">
+          <label for="newEventName">Event Name</label>
         </div>
         <div class="input-field col s12 center">
-          <input id="icon_prefix" type="text" class="validate datepicker">
-          <label for="icon_prefix">Start Date</label>
+          <input id="newEventStartDate" type="text" class="validate datepicker">
+          <label for="newEventStartDate">Start Date</label>
         </div>
         <div class="input-field col s12 center">
-          <input id="icon_prefix" type="text" class="validate datepicker">
-          <label for="icon_prefix">End Date</label>
+          <input id="newEventEndDate" type="text" class="validate datepicker">
+          <label for="newEventEndDate">End Date</label>
         </div>
 
-        <div id="dynamicInput" class="col l9 push-l1">
 
-          <h6> Invite friends via email</h6><br><input type="text" name="myInputs[]">
-          <input type="button" class="moreUsers" value=" + Add more users " onClick="addInput( 'dynamicInput'); ">
-          <br><br><br>
-        </div>
-        </button>
+
+        <!--editable user table  -->
       </div>
+      <div id="table" class="table-editable">
+      <a id="table-add" class=" btn-floating waves-effect waves-light blue"><i class="material-icons small">add</i></a>
+      <table class="table">
+        <tr>
+          <th>Username</th>
+        </tr>
+        <tr>
+          <td contenteditable="true" placeholder="give us a username!"></td>
+          <td>
+            <a id="RemoveGroup" class="btn-floating waves-effect waves-light blue"><i class="material-icons small">remove</i></a>
+          </td>
+        </tr>
+
+        <tr class="hide">
+          <td contenteditable="true" placeholder="give us a username!"></td>
+          <td>
+            <a id="RemoveGroup" class="btn-floating waves-effect waves-light blue"><i class="material-icons small">remove</i></a>
+          </td>
+        </tr>
+      </table>
+
+      </div>
+
+
+      </div>
+
+      </div>
+      <div class="center">
+        <button class="btn waves-effect waves-light submitNewEvent" href="album.html" type="submit " name="action ">Submit</button>
+       </div>
     </form>
-    <div class="center">
-      <button class="btn waves-effect waves-light submitNewEvent" type="submit " name="action ">Submit
-       <i class="material-icons right ">send</i>
 
-</div>
-
-<div class="container">
-  <br><br><br>
-  <h5>dev mode navigation</h5>
-  <a class="waves-effect waves-light btn" href='index.html'>index</a>
-  <a class="waves-effect waves-light btn" href='login.html'>login</a>
-  <a class="waves-effect waves-light btn" href='album.html'>album</a>
-  <a class="waves-effect waves-light btn" href='createevent.html'>create event</a>
-  <a class="waves-effect waves-light btn" href='dashboard.html'>dashboard</a>
-</div>
   </main>
 
-  <footer class="page-footer grey darken-4 ">
-
-    <div class="footer-copyright center ">
-      <div class="container ">
-        Made by Global Turtle Hackers
+  <footer class="page-footer grey darken-4">
+    <div class="footer-copyright center">
+      <div class="container">
+        <a target="_blank" href="https://www.linkedin.com/in/skornahrens/"> <img class="circle footerPics" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAodAAAAJDgwYWFiZTkzLTJkNjItNGZkZS1hOWM4LTVhMGJkZTg4Y2E3Zg.jpg"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/jpmendenhall/"> <img class="circle footerPics" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAArTAAAAJDk4ODQ5NzVlLTQwMzgtNDQzNC04NTQ1LTdjN2I2YzIzNWJlMQ.jpg"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/chelciebritt/"> <img class="circle footerPics" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAANiAAAAJGZkOTExMDFmLWNmYzUtNDNhZS04NmU0LTc4M2IzMWVkOGI4MQ.jpg"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/quintanamiriam/"> <img class="circle footerPics" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAA19AAAAJDMxYTI2Mjg3LTkyMjQtNDFmZC05YzM2LTU2NDgwMWE0OTMyNQ.jpg"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/cole-stasney/"> <img class="circle footerPics" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAA10AAAAJDY0ZTEyYmVjLWE3MWEtNGY4Ny05Y2EzLTAxMmQwNWRlM2JhZQ.jpg"></a>
       </div>
     </div>
   </footer>
@@ -115,9 +127,11 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js "></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.18.1/moment.js"></script>
   <script src="js/materialize.js "></script>
   <script src="js/init.js "></script>
   <script src="js/app.js "></script>
+  <script src="js/logout.js"></script>
 
 </body>
 
